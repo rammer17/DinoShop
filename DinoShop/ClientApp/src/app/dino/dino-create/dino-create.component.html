@@ -1,1 +1,37 @@
-<p>dino-create works!</p>
+<div class="container-sm">
+    <div class="row">
+        <div class="col">
+            <form 
+                [formGroup]="dinoForm" (ngSubmit)="onAddDino()">
+                <h3 class="my-5 text-center">Добавяне на динозавър</h3>
+                <div class="form-floating my-3">
+                    <input type="text"
+                            name="title"
+                            class="form-control"
+                            placeholder="title"
+                            formControlName="title">
+                    <label for="title" >Име</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text"
+                            name="description"
+                            class="form-control"
+                            placeholder="description"
+                            formControlName="description">
+                    <label for="description" >Описание</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number"
+                            name="price"
+                            class="form-control"
+                            placeholder="price"
+                            formControlName="price">
+                    <label for="price" >Цена</label>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-dark mt-3 me-3" [disabled]="!dinoForm.valid">Потвърди</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

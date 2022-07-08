@@ -5,3 +5,9 @@ export interface IDino {
     price: number,
     imgPath: string
 }
+export interface IDinoAddRequest {
+    Title: string,
+    Description: string,
+    Price: number,
+    ImgPath: string
+}

@@ -31,6 +31,8 @@ export class DinoPreviewComponent implements OnInit {
   }
   fetchDinoData() {
     this.selectedDino = this.dinoService.DinoList[this.selectedDinoId! - 1];
+    // this.selectedDino = this.dinoService.dinoList[this.selectedDinoId! - 1];
+
   }
   onAddToShoppingCart() {
     this.messageService.add({key:'main', severity: 'success', detail: `Динозавърът е добавен успешно!`, life:2500});

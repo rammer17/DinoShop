@@ -18,6 +18,7 @@ import { OrderPreviewComponent } from './shopping-cart/order-preview/order-previ
 import { CartDetailsComponent } from './shopping-cart/cart-details/cart-details.component';
 import { DinoCreateComponent } from './dino/dino-create/dino-create.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
     ToastModule,
     RouterModule,
     ImageModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent, MessageService]

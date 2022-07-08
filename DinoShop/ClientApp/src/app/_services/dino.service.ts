@@ -12,7 +12,7 @@ export class DinoService {
     
 
     getAll() {
-        return this.http.get(`${this.serverUrl}/Dino/GetAll`);
+        return this.http.get<IDino[]>(`${this.serverUrl}/Dino/GetAll`);
     }
     add(body: any) {
         return this.http.post(`${this.serverUrl}/Dino/Add`, body)
