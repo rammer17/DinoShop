@@ -1,11 +1,24 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { IDino } from "../_models/dino.model";
 
 @Injectable({
     providedIn: 'root'
-
 })
 export class DinoService {
+    constructor(private http: HttpClient) {}
+    serverUrl = 'http://localhost:5120';
+    dinoList: IDino[] = [];
+    
+
+    getAll() {
+        return this.http.get<IDino[]>(`${this.serverUrl}/Dino/GetAll`);
+    }
+    add(body: any) {
+        return this.http.post(`${this.serverUrl}/Dino/Add`, body)
+    }
+
+
     url: string = 'assets/'
     DinoList: IDino[] = [
         {
@@ -93,4 +106,5 @@ export class DinoService {
             imgPath: `${this.url}Mosasaurus_missouriensis_NT.png` 
         },
     ];
+
 }

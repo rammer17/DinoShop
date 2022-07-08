@@ -33,29 +33,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAuthorization();
 
-builder.Services.AddSwaggerGen(options =>
-{
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        In = ParameterLocation.Header,
-        Description = "Please insert JWT with Bearer into field",
-        Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey
-    });
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement {
-                   {
-                     new OpenApiSecurityScheme
-                     {
-                       Reference = new OpenApiReference
-                       {
-                         Type = ReferenceType.SecurityScheme,
-                         Id = "Bearer"
-                       }
-                      },
-                      new string[] { }
-                    }
-                  });
-});
+builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddCors();
@@ -76,11 +54,10 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-app.UseCors(builder =>
-builder.WithOrigins("http://localhost:5000")
-.AllowAnyHeader()
-.AllowCredentials()
-.AllowAnyMethod());
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 
 app.UseAuthorization();
