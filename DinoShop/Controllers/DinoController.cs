@@ -21,14 +21,14 @@ namespace DinoShop.Controllers
         [HttpGet]
         public ActionResult<List<DinoResponse>> GetAll()
         {
-            var dinos = _dbContext.Dinosaurs.Select(x => new DinoResponse
+            var dinos = _dbContext.Dinosaurs.Select(x => new DinoResponse()
             {
                 Id = x.Id,
                 Title = x.Title,
                 Description = x.Description,
                 Price = x.Price,
                 ImgPath = x.ImgPath
-            });
+            }).ToList();
 
             return Ok(dinos);
         }

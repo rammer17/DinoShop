@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DinoCreateComponent } from './dino/dino-create/dino-create.component';
 import { DinoPreviewComponent } from './dino/dino-preview/dino-preview.component';
 import { HomeComponent } from './home/home.component';
 import { CartDetailsComponent } from './shopping-cart/cart-details/cart-details.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component:  HomeComponent },
   { path: 'dino-preview', component:  DinoPreviewComponent },
+  { path: 'dino-create', component:  DinoCreateComponent },
   { path: 'cart', component:  ShoppingCartComponent, children: [
     { path: '', component: CartDetailsComponent },
     { path: 'details', component: OrderDetailsComponent },

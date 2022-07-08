@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OrderDetailsComponent } from './shopping-cart/order-details/order-details.component';
 import { OrderPreviewComponent } from './shopping-cart/order-preview/order-preview.component';
 import { CartDetailsComponent } from './shopping-cart/cart-details/cart-details.component';
+import { DinoCreateComponent } from './dino/dino-create/dino-create.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { CartDetailsComponent } from './shopping-cart/cart-details/cart-details.
     OrderDetailsComponent,
     OrderPreviewComponent,
     CartDetailsComponent,
+    DinoCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { CartDetailsComponent } from './shopping-cart/cart-details/cart-details.
     ButtonModule,
     ToastModule,
     RouterModule,
-    ImageModule
+    ImageModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent, MessageService]
