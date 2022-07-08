@@ -28,6 +28,14 @@
                             formControlName="price">
                     <label for="price" >Цена</label>
                 </div>
+                <div class="form-floating mb-3">
+                    <input type="text"
+                            name="imgPath"
+                            class="form-control"
+                            placeholder="imgPath"
+                            formControlName="imgPath">
+                    <label for="imgPath" >Снимки</label>
+                </div>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-dark mt-3 me-3" [disabled]="!dinoForm.valid">Потвърди</button>
                 </div>
