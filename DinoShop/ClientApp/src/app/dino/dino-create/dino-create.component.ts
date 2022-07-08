@@ -21,7 +21,8 @@ export class DinoCreateComponent implements OnInit {
     title: new FormControl(''),
     description: new FormControl(''),
     price: new FormControl(''),
-    imgPath: new FormControl('')
+    imgPath: new FormControl(''),
+    class: new FormControl('')
   })
 
   ngOnInit(): void {
@@ -34,6 +35,7 @@ export class DinoCreateComponent implements OnInit {
       'Description': this.dinoForm.get(['description'])?.value,
       'Price': +this.dinoForm.get(['price'])?.value,
       'ImgPath': this.dinoForm.get(['imgPath'])?.value,
+      'Class': this.dinoForm.get(['class'])?.value,
     }
     this.subs = this.dinoService.add(body).subscribe({
       complete: () => {

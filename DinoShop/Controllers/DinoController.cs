@@ -27,7 +27,8 @@ namespace DinoShop.Controllers
                 Title = x.Title,
                 Description = x.Description,
                 Price = x.Price,
-                ImgPath = x.ImgPath
+                ImgPath = x.ImgPath,
+                Class = x.Class
             }).ToList();
 
             return Ok(dinos);
@@ -41,7 +42,8 @@ namespace DinoShop.Controllers
                 Title = request.Title,
                 Description = request.Description,
                 Price = request.Price,
-                ImgPath = request.ImgPath
+                ImgPath = request.ImgPath,
+                Class = request.Class
             };
 
             _dbContext.Dinosaurs.Add(newDino);

@@ -3,11 +3,13 @@ export interface IDino {
     title: string,
     description: string,
     price: number,
-    imgPath: string
+    imgPath: string,
+    class: string
 }
 export interface IDinoAddRequest {
     Title: string,
     Description: string,
     Price: number,
-    ImgPath: string
+    ImgPath: string,
+    Class: string
 }

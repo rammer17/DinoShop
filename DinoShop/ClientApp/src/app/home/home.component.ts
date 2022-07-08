@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
     this.subs = this.dinoService.getAll().subscribe({
       next: (resp: IDino[]) => {
         this.dinoService.dinoList = resp;
-        console.log(resp);
       },
       error: err => {
         console.log(err);

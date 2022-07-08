@@ -2,60 +2,48 @@
   <div class="dropdown">
     <button class="dropbtn">Хищници</button>
     <div class="dropdown-content">
-      <li
+      <li 
+        *ngFor="let predator of predators"
         routerLink="dino-preview"
-        [queryParams]="{ id: 4}">T-рекс</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 2}">Алозавър</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 3}">Спинозавър</li>
+        [queryParams]="{ id: predator.id}">
+        {{ predator.title }}
+      </li>
     </div>
   </div>
 
   <div class="dropdown">
     <button class="dropbtn">Тревопасни</button>
     <div class="dropdown-content">
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 5}">Диплодок</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 1}">Бронтозавър</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 6}">Патаготитански майор</li>
+      <li 
+        *ngFor="let herb of herbivorous"
+        routerLink="dino-preview"
+        [queryParams]="{ id: herb.id}">
+        {{ herb.title }}
+      </li>
     </div>
   </div>
 
   <div class="dropdown">
     <button class="dropbtn">Летящи</button>
     <div class="dropdown-content">
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 7}">Археоптерикс</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 8}">Птеродактил</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 9}">Аргентавис</li>
+      <li 
+        *ngFor="let fly of flying"
+        routerLink="dino-preview"
+        [queryParams]="{ id: fly.id}">
+        {{ fly.title }}
+      </li>
     </div>
   </div>
 
   <div class="dropdown">
     <button class="dropbtn">Водни</button>
     <div class="dropdown-content">
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 10}">Ихтиозавър</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 11}">Мегалодон</li>
-      <li
-      routerLink="dino-preview"
-      [queryParams]="{ id: 12}">Мозазавър</li>
+      <li 
+        *ngFor="let aqua of aquatic"
+        routerLink="dino-preview"
+        [queryParams]="{ id: aqua.id}">
+        {{ aqua.title }}
+      </li>
     </div>
   </div>
 
