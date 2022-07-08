@@ -3,7 +3,10 @@
         color: var(--text-light);
     }
     .container-fluid {
-        background: var(--drop-down);
+        background-image: url("https://images.unsplash.com/photo-1583307709855-88a955597645?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-size: cover;
         min-height: 700px;
     }
     .img-container {
