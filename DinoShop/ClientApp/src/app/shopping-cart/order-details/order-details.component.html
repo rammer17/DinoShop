@@ -1,50 +1,50 @@
 <div class="container-sm">
     <div class="row">
         <div class="col">
-            <form>
+            <form [formGroup]="orderForm">
                 <h3 class="my-5 text-center text-white">Детайли по поръчката</h3>
                 <div class="form-floating my-3">
                     <input type="text"
-                            name="title"
+                            name="firstName"
                             class="form-control"
-                            placeholder="title"
-                            formControlName="title">
-                    <label for="title" >Име</label>
+                            placeholder="firstName"
+                            formControlName="firstName">
+                    <label for="firstName" >Име</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text"
-                            name="description"
+                            name="lastName"
                             class="form-control"
-                            placeholder="description"
-                            formControlName="description">
-                    <label for="description" >Фамилия</label>
+                            placeholder="lastName"
+                            formControlName="lastName">
+                    <label for="lastName" >Фамилия</label>
                 </div>
                 <div class="form-floating mb-3">
-                        <div class="col-md">
-                          <div class="form-floating">
-                            <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
-                            <label for="floatingInputGrid">Email адрес</label>
-                          </div>
-                        </div>
+                    <input type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="email"
+                            formControlName="email">
+                    <label for="email" >Фамилия</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number"
+                            name="phoneNumber"
+                            class="form-control"
+                            placeholder="phoneNumber"
+                            formControlName="phoneNumber">
+                    <label for="phoneNumber" >Телефонен номер</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text"
-                            name="description"
+                            name="address"
                             class="form-control"
-                            placeholder="description"
-                            formControlName="description">
-                    <label for="description" >Телефонен номер</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text"
-                            name="description"
-                            class="form-control"
-                            placeholder="description"
-                            formControlName="description">
-                    <label for="description" >Адрес</label>
+                            placeholder="address"
+                            formControlName="address">
+                    <label for="address" >Адрес</label>
                 </div>
                 <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-dark mt-3 me-3" routerLink="/cart/preview">Потвърди</button>
+                    <button type="submit" class="btn btn-dark mt-3 me-3" (click)="onSubmit()">Потвърди</button>
                 </div>
             </form>
         </div>
