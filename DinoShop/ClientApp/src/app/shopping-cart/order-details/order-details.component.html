@@ -31,6 +31,7 @@
                     <input type="number"
                             name="phoneNumber"
                             class="form-control"
+                            value=""
                             placeholder="phoneNumber"
                             formControlName="phoneNumber">
                     <label for="phoneNumber" >Телефонен номер</label>
@@ -44,7 +45,7 @@
                     <label for="address" >Адрес</label>
                 </div>
                 <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-dark mt-3 me-3" (click)="onSubmit()">Потвърди</button>
+                    <button type="submit" class="btn btn-dark mt-3 me-3" (click)="onSubmit()" [disabled]="!orderForm.valid">Потвърди</button>
                 </div>
             </form>
         </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ShoppingCartService } from 'src/app/_services/shopping-cart.service';
@@ -20,11 +20,11 @@ export class OrderDetailsComponent implements OnInit {
     this.fetchOrderDetails();
   }
   orderForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    phoneNumber: new FormControl(0),
-    address: new FormControl('')
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    phoneNumber: new FormControl(0, Validators.required),
+    address: new FormControl('', Validators.required)
   })
 
   onSubmit() {
