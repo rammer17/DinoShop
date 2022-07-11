@@ -45,7 +45,6 @@ namespace DinoShop.Controllers
                 ImgPath = request.ImgPath,
                 Class = request.Class
             };
-
             _dbContext.Dinosaurs.Add(newDino);
             _dbContext.SaveChanges();
             return Ok();
