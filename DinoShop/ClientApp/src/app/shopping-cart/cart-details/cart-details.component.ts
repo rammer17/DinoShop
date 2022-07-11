@@ -35,10 +35,9 @@ export class CartDetailsComponent implements OnInit {
     
   }
   checkout() {
-    this.messageService.add({key: 'cart', severity: 'success', detail: 'Поръчката е направена успешно!'});
     this.isCartEmpty = true;
     this.cartItems?.splice(0);
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('details');
   }
   removeItem(index: number) {
     this.cartItems?.splice(index, 1)
