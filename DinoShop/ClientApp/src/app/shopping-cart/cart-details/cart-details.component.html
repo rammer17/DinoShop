@@ -23,7 +23,7 @@
                             class="dino-wrapper d-flex justify-content-between p-3 flex-wrap mb-3">
                             <div class="wrapper d-flex flex-wrap">
                                 <div class="img-container">
-                                    <p-image [src]="dino?.imgPath!" alt="Image" width="450" [preview]="true"></p-image>
+                                    <p-image [src]="dino?.imgPath!" alt="Image" width="450" [preview]="true" (click) = "playAudio()";></p-image>
                                 </div>
                                 <div class="info-container ps-3 pt-3">
                                     {{ dino.title }}

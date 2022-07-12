@@ -11,7 +11,7 @@ import { ShoppingCartService } from 'src/app/_services/shopping-cart.service';
   styleUrls: ['./dino-preview.component.scss']
 })
 export class DinoPreviewComponent implements OnInit {
-  @Input('audioRef') audioRef: any;
+  
   audio: any;
 
   selectedDinoId?: number;

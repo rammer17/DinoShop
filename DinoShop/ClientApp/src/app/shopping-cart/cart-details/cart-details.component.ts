@@ -14,13 +14,20 @@ export class CartDetailsComponent implements OnInit {
   isCartEmpty: boolean = true;
   bill: number = 0;
   finalBill: number = 0;
-
+  selectedDino?: IDino;
+  audio: any;
   constructor(private scService: ShoppingCartService,
               private messageService: MessageService,
               private router: Router) { }
 
   ngOnInit(): void {
     this.fetchCartItems();
+  }
+  playAudio(){
+    let audio = new Audio();
+    audio.src = this.selectedDino?.soundPath!;
+    audio.load();
+    audio.play();
   }
   fetchCartItems() {
     this.cartItems = this.scService.getCartItems();
