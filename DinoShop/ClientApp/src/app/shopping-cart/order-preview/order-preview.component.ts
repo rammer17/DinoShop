@@ -10,14 +10,6 @@ import { ShoppingCartService } from 'src/app/_services/shopping-cart.service';
 export class OrderPreviewComponent implements OnInit {
   subs?: Subscription;
   orderDetails: any;
-  orderDetailsDummy = {
-    cartItems: [],
-    firstName: 'Андриян',
-    lastName: 'Беров',
-    email: 'test@abv.bg',
-    phoneNumber: '080993232',
-    address: 'Адрес'
-  }
 
   constructor(private scService: ShoppingCartService) { }
 
@@ -28,7 +20,6 @@ export class OrderPreviewComponent implements OnInit {
     this.subs = this.scService.orderDetails.subscribe(
       resp => {
         this.orderDetails = resp;
-        console.log(resp)
       }
     )
   }
