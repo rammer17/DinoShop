@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { IDino } from 'src/app/_models/dino.model';
@@ -11,6 +11,9 @@ import { ShoppingCartService } from 'src/app/_services/shopping-cart.service';
   styleUrls: ['./dino-preview.component.scss']
 })
 export class DinoPreviewComponent implements OnInit {
+  @Input('audioRef') audioRef: any;
+  audio: any;
+
   selectedDinoId?: number;
   selectedDino?: IDino;
 
@@ -33,7 +36,14 @@ export class DinoPreviewComponent implements OnInit {
     this.selectedDino = this.dinoService.dinoList[this.selectedDinoId! - 2];
 
   }
+  playAudio(){
+    let audio = new Audio();
+    audio.src = this.selectedDino?.soundPath!;
+    audio.load();
+    audio.play();
+  }
   onAddToShoppingCart() {
+    this.playAudio();
     this.messageService.add({key:'main', severity: 'success', detail: `Динозавърът е добавен успешно!`, life:2500});
     this.scService.addToCart(this.selectedDino);
   }

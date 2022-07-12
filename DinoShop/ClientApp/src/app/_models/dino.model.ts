@@ -4,6 +4,7 @@ export interface IDino {
     description: string,
     price: number,
     imgPath: string,
+    soundPath: string,
     class: string
 }
 export interface IDinoAddRequest {
@@ -11,5 +12,6 @@ export interface IDinoAddRequest {
     Description: string,
     Price: number,
     ImgPath: string,
+    SoundPath: string,
     Class: string
 }

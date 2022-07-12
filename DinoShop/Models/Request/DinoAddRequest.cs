@@ -6,6 +6,8 @@
         public string Description { get; set; }
         public int Price { get; set; }
         public string ImgPath { get; set; }
+        public string SoundPath { get; set; }
+
         public string Class { get; set; }
 
     }

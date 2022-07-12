@@ -35,6 +35,7 @@ export class DinoCreateComponent implements OnInit {
       'Description': this.dinoForm.get(['description'])?.value,
       'Price': +this.dinoForm.get(['price'])?.value,
       'ImgPath': this.dinoForm.get(['imgPath'])?.value,
+      'SoundPath': this.dinoForm.get(['soundPath'])?.value,
       'Class': this.dinoForm.get(['class'])?.value,
     }
     this.subs = this.dinoService.add(body).subscribe({

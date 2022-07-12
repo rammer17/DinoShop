@@ -3,7 +3,7 @@
 <div class="container-fluid asd">
     <div class="row">
         <div class="col mt-4">
-            <h1 routerLink="home" class="title">Енциклопедия за динозаврите</h1>
+            <h1 routerLink="/home" class="title">Енциклопедия за динозаврите</h1>
             <h2 class="mt-5">{{ selectedDino?.title }}</h2>
         </div>
     </div>  
@@ -21,9 +21,6 @@
             <p style="background-color: rgba(17, 17, 17, 0.7); box-shadow: 4px 4px 10px 0px black; padding: 20px;">
                 {{ selectedDino?.description }}
             </p>
-            <audio controls #audioRef>
-                <source src="assets/sounds/jurassic-world-making-the-mosasaurus-sound-featurette-jurassic-world.mp3" type="audio/mp3">
-            </audio>
          </div>
     </div>
 </div>

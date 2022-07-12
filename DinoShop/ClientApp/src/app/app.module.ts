@@ -23,14 +23,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     DinoPreviewComponent,
+    DinoCreateComponent,
+    HeaderComponent,
     HomeComponent,
     ShoppingCartComponent,
+    CartDetailsComponent,
     OrderDetailsComponent,
     OrderPreviewComponent,
-    CartDetailsComponent,
-    DinoCreateComponent,
   ],
   imports: [
     BrowserModule,
