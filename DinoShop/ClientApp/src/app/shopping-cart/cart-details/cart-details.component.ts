@@ -23,9 +23,9 @@ export class CartDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.fetchCartItems();
   }
-  playAudio(){
+  playAudio(dino: IDino){
     let audio = new Audio();
-    audio.src = this.selectedDino?.soundPath!;
+    audio.src = dino.soundPath;
     audio.load();
     audio.play();
   }
