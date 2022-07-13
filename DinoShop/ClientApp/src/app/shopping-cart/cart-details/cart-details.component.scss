@@ -42,7 +42,7 @@
         font-size: 30px;
     }
     .item-wrapper {
-        overflow-y: scroll;
+        overflow-y: auto;
         height: 400px;
     }
     @media (max-width: 768px) {
