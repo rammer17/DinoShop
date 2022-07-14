@@ -33,7 +33,7 @@ export class DinoPreviewComponent implements OnInit {
     })
   }
   fetchDinoData() {
-    this.selectedDino = this.dinoService.dinoList[this.selectedDinoId! - 2];
+    this.selectedDino = this.dinoService.dinoList[this.selectedDinoId! - 1];
   }
   playAudio(){
     let audio = new Audio();

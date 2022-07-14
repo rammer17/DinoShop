@@ -22,6 +22,7 @@ export class DinoCreateComponent implements OnInit {
     description: new FormControl(''),
     price: new FormControl(''),
     imgPath: new FormControl(''),
+    soundPath: new FormControl(''),
     class: new FormControl('')
   })
 
