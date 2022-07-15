@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { IDino } from "../_models/dino.model";
+import { IDino, IDinoAddRequest } from "../_models/dino.model";
 
 @Injectable({
     providedIn: 'root'
@@ -14,7 +14,7 @@ export class DinoService {
     getAll() {
         return this.http.get<IDino[]>(`${this.serverUrl}/Dino/GetAll`);
     }
-    add(body: any) {
+    add(body: IDinoAddRequest) {
         return this.http.post(`${this.serverUrl}/Dino/Add`, body)
     }
 
